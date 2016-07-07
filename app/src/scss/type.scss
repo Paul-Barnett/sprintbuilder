@@ -1,0 +1,136 @@
+@import 'fonts';
+
+@mixin body-font{
+	font-family: $secondaryFontFace;
+	font-size: $fontSize-xxs;
+	font-weight: 300;
+	color: $colorGrey-steel;
+}
+
+body{
+	@include body-font;
+}
+
+.primary-font{
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+.primary-font-light{
+	font-family: $primaryFontFaceLight;
+	font-weight: 400;
+}
+.secondary-font{
+	font-family: $secondaryFontFace;
+	font-weight: 300;
+}
+
+.heading1{
+	font-size: $fontSize-xxl;
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+.heading2{
+	font-size: $fontSize-xl;
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+.heading3{
+	font-size: $fontSize-l;
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+.heading4{
+	font-size: $fontSize-m;
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+
+.heading5{
+	font-size: $fontSize-s;
+	font-family: $secondaryFontFace;
+	font-weight: 300;
+}
+
+.heading1-light{
+	font-size: $fontSize-xxl;
+	font-family: $primaryFontFaceLight;
+	font-weight: 400;
+}
+.heading2-light{
+	font-size: $fontSize-xl;
+	font-family: $primaryFontFaceLight;
+	font-weight: 400;
+}
+.heading3-light{
+	font-size: $fontSize-l;
+	font-family: $primaryFontFaceLight;
+	font-weight: 400;
+}
+.heading4-light{
+	font-size: $fontSize-m;
+	font-family: $primaryFontFaceLight;
+	font-weight: 400;
+}
+
+.fontSize-xxl{
+	font-size: $fontSize-xxl;
+}
+.fontSize-xl{
+	font-size: $fontSize-xl;
+}
+.fontSize-l{
+	font-size: $fontSize-l;
+}
+.fontSize-m{
+	font-size: $fontSize-m;
+}
+.fontSize-s{
+	font-size: $fontSize-s;
+}
+.fontSize-xs{
+	font-size: $fontSize-xs;
+}
+
+.fontWeight-normal{
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+.fontWeight-bold{
+	font-family: $primaryFontFace;
+	font-weight: 400;
+}
+
+.ordered-list{
+	padding-left: $list-indent;
+	margin-top: $margin-m;
+	margin-bottom: $margin-m;
+	
+	li{
+		margin-top: $margin-s;
+		margin-bottom: $margin-s;
+	}
+}
+.unordered-list{
+	padding-left: $list-indent;
+	margin-top: $margin-m;
+	margin-bottom: $margin-m;
+	
+	li{
+		margin-top: $margin-s;
+		margin-bottom: $margin-s;
+	}
+}
+.blockquote{
+	padding-left: $list-indent;
+	margin-top: $margin-s;
+	margin-bottom: $margin-s;
+	margin-left: 0;
+	margin-right: 0;
+	@include body-font;
+	font-size: $fontSize-s;
+	color: red;
+	text-align: center;
+	.quote-source{
+		color: black;
+	}
+}

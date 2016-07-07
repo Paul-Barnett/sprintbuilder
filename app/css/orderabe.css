@@ -1,0 +1,28 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+#orderableWrapper{
+	width: 1040px;
+	margin: 0 auto;
+	padding: 40px;
+}
+#orderableWrapper .orderableBox{
+	width: 33.3333%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+}
+.orderableBox .orderableInner{
+	background-color: #CCC;
+	padding: 10px 20px;
+}
+
+.ui-sortable .ui-sortable-handle .orderableInner{
+	cursor: move;
+}
+.ui-sortable.ui-sortable-disabled .ui-sortable-handle .orderableInner{
+	cursor: auto;
+}

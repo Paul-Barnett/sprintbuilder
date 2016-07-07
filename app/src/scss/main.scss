@@ -1,0 +1,222 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@import 'variables';
+
+@import 'helpers';
+
+@import 'colours';
+
+@import 'type';
+
+@import 'components';
+
+#content{
+	max-width: 1440px;
+	margin: 0 auto;
+	display: block;
+}
+
+#orderableControlls{
+	height: 120px;
+	width: 100%;
+	padding: 20px 32px;
+	.order-links{
+		float: right;
+		margin: 10px 0;
+		a{
+			line-height: 26px;
+			margin: 0 8px;
+		}
+	}
+	.epicCount{
+		float: right;
+		line-height: 26px;
+		margin: 10px 16px;
+		.countBox{
+			border-radius: 50%;
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			background-color: #7ed321;
+			color: #FFF;			
+			text-align: center;
+			margin-right: 8px;
+		}
+	}
+	.addNewButton{
+		float: right;
+
+	}	
+}
+
+#orderableWrapper{
+	display: block;
+	margin: 0 32px;
+	//padding: 40px;	
+	.heading5{
+		margin-bottom: 8px;
+		text-align: center;
+	}
+	.priority-high,
+	.priority-normal{
+		min-height: 300px;
+		position: relative;
+		margin-bottom: 32px;
+		border-radius: 8px;
+		display: inline-table;
+		width: 100%;
+	}
+	.priority-high{
+		background-color: #f9fafc;
+		border: 1px dashed #e0e6ed;
+	}
+	.priority-normal{
+		border: 1px dashed #e0e6ed;		
+	}
+	.no-content{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.orderableBox{
+		width: 33.3333%;
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 20px;
+		.orderableInner{
+			padding: 18px;
+			background-color: white;
+			border: 1px solid #e0e6ed;
+			border-radius: 12px;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19);
+			p{
+				font-size: $fontSize-xs;
+				margin-bottom: $margin-s;
+			}
+			small{
+				font-size: $fontSize-xxs;
+				color: $colorGrey-silver;
+			}
+		}
+		.orderableActions{
+			& > span{
+				display: inline-block;
+				width: 36px;
+				height: 36px;
+				background-color: #f9fafc;
+				border: 1px solid #e0e6ed;
+				border-radius: 50%;
+				color: #384047;
+				font-family: "Proxima Nova";
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 34px;
+				text-align: center;
+				margin-bottom: 8px;
+				cursor: pointer;
+				&.pull-right{
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+}
+
+.ui-sortable{
+	.orderableInner{
+		cursor: move;	
+	}
+	&.ui-sortable-disabled{
+		.orderableInner{
+			cursor: auto;
+		}
+	}
+}
+.sortable-placeholder{
+	width: calc( 33% - 40px );
+	border: 1px dashed #C0CCDB;
+	height: auto;
+	min-height: 80px;
+	display: inline-block;
+	margin: 20px;
+}
+
+.bg-overlay{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(56, 64, 71, 0.7);
+	display: none;
+	z-index: 99998;
+}
+.editPostForm,
+.addPostForm{
+	width: 100%;
+	max-width: 520px;
+	height: auto;
+	background-color: #FFF;
+	border-radius: 12px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+	padding: 44px 36px 36px 36px;
+	position: absolute;
+	top: 10%;
+	max-height: 80%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 99999;
+	text-align: center;
+	overflow: auto;
+	display: none;
+	.close{
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		width: 36px;
+		height: 36px;
+		line-height: 34px;
+		border-radius: 50%;
+		background-color: #f9fafc;
+		border: 1px solid #e0e6ed;
+		color: #979797;
+		cursor: pointer;
+	}
+	h3{
+		margin-bottom: 16px;
+	}
+	p{
+		margin-bottom: 32px;
+	}
+	label{
+		float: left;
+		margin-bottom: 8px;
+	}
+	.epicField{
+		width: 100%;
+		font-size: 20px;
+		padding: 8px;
+		margin-bottom: 16px;
+		border: 1px solid #e0e6ed;
+		background-color: #f9fafc;
+		border-radius: 8px;
+		outline: none;
+	}
+	input.epicField{
+		height: 50px;
+	}
+	textarea{
+		resize: none;
+		font-family: "proxima-nova",sans-serif;
+	}
+	.button{
+		outline: none;
+		border: none;
+	}
+}
